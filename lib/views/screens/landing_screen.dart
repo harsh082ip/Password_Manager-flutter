@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:password_manager/views/screens/auth/login_screen.dart';
 import 'package:password_manager/views/widgets/landingScreen_list.dart';
 
 class Landing_Screen extends StatelessWidget {
@@ -72,11 +74,10 @@ class Landing_Screen extends StatelessWidget {
                       subtitle:
                           'Our user-friendly interface makes it effortless to add, view, and manage your passwords.',
                       listIcon: Icons.phone_android),
-                  SizedBox(
-                    height: MediaQuery.of(context).size.height -
-                        (MediaQuery.of(context).size.height - 220),
-                  ),
                   Container(
+                    margin: EdgeInsets.only(
+                        top: MediaQuery.of(context).size.height -
+                            (MediaQuery.of(context).size.height * 0.74)),
                     height: 50.0,
                     width: MediaQuery.of(context).size.width * 0.95,
                     child: ElevatedButton(
@@ -91,9 +92,11 @@ class Landing_Screen extends StatelessWidget {
                           color: Colors.white,
                         ),
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        Get.to(LoginScreen());
+                      },
                       child: const Text(
-                        'Download Wallpaper',
+                        'Get Started',
                         style: TextStyle(fontSize: 22.0, color: Colors.white),
                       ),
                     ),
