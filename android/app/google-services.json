@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "436325578343",
+    "project_id": "trustypass-f84b5",
+    "storage_bucket": "trustypass-f84b5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:436325578343:android:17dfcb039848ad1a3b86c2",
+        "android_client_info": {
+          "package_name": "com.harsh082ip.password_manager.password_manager"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "436325578343-l22rl1imgvis5t99kl8ov0gj6rksbt76.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAjTGCmFcvKCO28jRmJ2uHlyQmLPrOXNu4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "436325578343-l22rl1imgvis5t99kl8ov0gj6rksbt76.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

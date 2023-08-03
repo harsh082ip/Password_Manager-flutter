@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:password_manager/views/screens/auth/signup_screen.dart';
 
+import '../../../controller/firebase_auth.dart';
+
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
 
@@ -124,9 +126,8 @@ class _LoginScreenState extends State<LoginScreen> {
                               side: BorderSide(color: Colors.white, width: 2.0),
                               borderRadius: BorderRadius.circular(6.0))),
                       onPressed: () {
-                        // Auth.instance.login(emailTextEditingController.text,
-                        //     passwordTextEditingController.text
-                        //     );
+                        Auth.instance.login(emailEditingController.text,
+                            passwordEditingController.text);
                       },
                       child: const Text(
                         'Login',
