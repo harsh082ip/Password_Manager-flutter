@@ -1,18 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:password_manager/views/screens/auth/signup_screen.dart';
+import 'package:password_manager/views/screens/auth/login_screen.dart';
 
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({super.key});
+class SignUp_Screen extends StatefulWidget {
+  const SignUp_Screen({super.key});
 
   @override
-  State<LoginScreen> createState() => _LoginScreenState();
+  State<SignUp_Screen> createState() => _SignUp_ScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class _SignUp_ScreenState extends State<SignUp_Screen> {
   final TextEditingController emailEditingController = TextEditingController();
   final TextEditingController passwordEditingController =
       TextEditingController();
+  final TextEditingController nameEditingController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,7 +37,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     'assets/images/login.png',
                   ),
                   Text(
-                    'Login',
+                    'SignUp',
                     style: TextStyle(
                         color: Colors.white,
                         fontSize: 50.0,
@@ -45,6 +46,39 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                   const SizedBox(
                     height: 75.0,
+                  ),
+                  Container(
+                    margin: const EdgeInsets.symmetric(horizontal: 10.0),
+                    child: TextFormField(
+                      controller: nameEditingController,
+                      style: const TextStyle(color: Colors.white),
+                      keyboardType: TextInputType.emailAddress,
+                      decoration: InputDecoration(
+                        hintText: 'John Fernendez',
+                        hintStyle: const TextStyle(color: Colors.white),
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: const BorderSide(
+                              color: Colors.white, style: BorderStyle.solid),
+                          borderRadius: BorderRadius.circular(25.0),
+                        ),
+                        border: OutlineInputBorder(
+                          borderSide: const BorderSide(
+                              color: Colors.white, style: BorderStyle.solid),
+                          borderRadius: BorderRadius.circular(25.0),
+                        ),
+                        prefixIcon: const Icon(
+                          Icons.email,
+                          color: Colors.white,
+                        ),
+                        labelText: 'Name',
+                        labelStyle: const TextStyle(
+                          color: Colors.white,
+                        ),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 25.0,
                   ),
                   Container(
                     margin: const EdgeInsets.symmetric(horizontal: 10.0),
@@ -111,7 +145,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                   ),
                   const SizedBox(
-                    height: 110,
+                    height: 90,
                   ),
                   Container(
                     height: 48.0,
@@ -129,7 +163,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         //     );
                       },
                       child: const Text(
-                        'Login',
+                        'SignUp',
                         style: TextStyle(fontSize: 22.0, color: Colors.white),
                       ),
                     ),
@@ -138,15 +172,15 @@ class _LoginScreenState extends State<LoginScreen> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       const Text(
-                        'don\'t have an account?',
+                        'already have an account?',
                         style: TextStyle(fontSize: 18.0, color: Colors.white),
                       ),
                       TextButton(
                         onPressed: () {
-                          Get.off(SignUp_Screen());
+                          Get.off(LoginScreen());
                         },
                         child: const Text(
-                          'Create Here',
+                          'Login Here',
                           style: TextStyle(fontSize: 18.0),
                         ),
                       )
